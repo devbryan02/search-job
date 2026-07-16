@@ -1,0 +1,112 @@
+%-------------------------
+% CV Brayan Cárdenas Muñoz
+% Adaptado: Practicante Profesional TI
+%-------------------------
+\documentclass[10pt, letterpaper]{article}
+% ---------- PAQUETES ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}  
+\usepackage{array}
+% ---------- MÁRGENES ----------
+\geometry{
+  top=1cm,
+  bottom=0.7cm,
+  left=1.2cm,
+  right=1.2cm
+}
+% ---------- COLORES ----------
+\definecolor{primary}{RGB}{0, 51, 102}
+\definecolor{accent}{RGB}{180, 0, 0}
+\definecolor{lightgray}{RGB}{245, 245, 245}
+\definecolor{darkgray}{RGB}{80, 80, 80}
+% ---------- HYPERLINKS ----------
+\hypersetup{
+  colorlinks=true,
+  urlcolor=primary,
+  linkcolor=primary
+}
+% ---------- SECCIONES ----------
+\titleformat{\section}
+  {\large\bfseries\color{primary}}
+  {}
+  {0em}
+  {}
+  [\vspace{-4pt}\color{darkgray}\rule{\linewidth}{1.2pt}\vspace{2pt}]
+\titlespacing{\section}{0pt}{5pt}{2pt}
+\pagestyle{empty}
+% ---------- COMANDOS ----------
+\newcommand{\cvproject}[3]{%
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}Xr@{}}
+    \textbf{#1} & \textit{\small #2}
+  \end{tabularx}%
+  \vspace{0pt}%
+  \begin{itemize}[leftmargin=1.2em, itemsep=1pt, topsep=0pt, parsep=0pt]
+    #3
+  \end{itemize}%
+  \vspace{2pt}
+}
+\newcommand{\cvskill}[2]{%
+  \noindent\textbf{\color{primary}#1:} #2\\[1pt]
+}
+\begin{document}
+% ---------- ENCABEZADO ----------
+\begin{center}
+  {\LARGE\bfseries\color{primary} Brayan Cárdenas Muñoz}\\[2pt]
+  {\large\textbf{Practicante de TI | Soporte Técnico}}\\[2pt]
+  {\small
+    Lima, Perú \quad\textbar\quad
+    \href{mailto:brayan7br7@gmail.com}{brayan7br7@gmail.com} \quad\textbar\quad
+    +51 992 450 988 \quad\textbar\quad
+    \href{https://github.com/devbryan02}{github.com/devbryan02}
+  }
+\end{center}
+\vspace{1pt}
+% ---------- PERFIL ----------
+\section{Perfil Profesional}
+Egresado de Ingeniería de Sistemas con experiencia práctica en soporte técnico, configuración de equipos con Windows, instalación de software y atención a usuarios. Conocimiento en herramientas de inventario, Microsoft Office (Excel) y redes básicas. Interés por el área de Tecnología de la Información y el soporte a usuarios, con disposición para aprender y aportar en actividades operativas y de gestión de equipos.
+% ---------- EXPERIENCIA ----------
+\section{Experiencia Profesional}
+\cvproject{%
+  Practicante de Sistemas -- Municipalidad A.A. Cáceres Dorregaray%
+}{Ayacucho, Perú \quad|\quad sep 2025 -- may 2026}{%
+  \item Configuré y reparé equipos con Windows, instalé software corporativo y realicé mantenimiento preventivo y correctivo de hardware.
+  \item Atendí solicitudes de usuarios, resolviendo incidencias de acceso a red, impresoras y configuración de perfiles.
+  \item Diagnosticé problemas de conectividad IP y configuré recursos de red para distintas áreas de la municipalidad.
+  \item Apoyé en el registro, inventario y control de equipos, actualizando registros y reportando novedades.
+  \item Desarrollé una API REST con Laravel y MySQL para digitalizar procesos del área veterinaria municipal.
+  \item Implementé autenticación JWT y control de acceso por roles, y documenté 15+ endpoints con Swagger/OpenAPI.
+}
+% ---------- PROYECTOS ----------
+\section{Proyectos}
+\cvproject{%
+  \href{https://github.com/devbryan02/veterinaria-app-backend}{Sistema Veterinario Municipal}%
+}{sep 2025 -- may 2026}{%
+  \item Desarrollé un sistema web con Laravel, MySQL y autenticación JWT para el control de mascotas y vacunas, implementado y utilizado por personal municipal.
+}
+% ---------- HABILIDADES ----------
+\section{Habilidades Técnicas}
+\cvskill{Sistemas Operativos}{Windows 10/11, Linux básico}
+\cvskill{Soporte Técnico}{Instalación de software, configuración de equipos, atención a usuarios, redes básicas (IP, conectividad), impresoras}
+\cvskill{Herramientas}{Microsoft Office (Excel), inventario de equipos, control y registro}
+\cvskill{Backend}{Java, Laravel, APIs REST, JWT (conocimiento complementario)}
+\cvskill{Bases de Datos}{MySQL, SQL, modelado relacional}
+\cvskill{Competencias}{Análisis de problemas, aprendizaje autónomo, atención a usuarios, organización}
+\cvskill{Idiomas}{Español (nativo), Quechua (nativo), Inglés (intermedio -- lectura técnica)}
+% ---------- EDUCACIÓN ----------
+\section{Educación}
+\noindent
+\begin{tabularx}{\linewidth}{@{}Xr@{}}
+  \textbf{Escuela Superior La Pontificia} & \textit{2021 -- 2026}\\
+  \textit{Ingeniería de Sistemas \quad|\quad Ayacucho, Perú} & \\
+\end{tabularx}
+\vspace{2pt}
+\noindent Egresado. Enfoque en desarrollo de software, infraestructura de redes y bases de datos.
+\end{document}
