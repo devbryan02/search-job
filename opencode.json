@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": ["AGENT.md"],
+  "references": {
+    "knowledge": {
+      "path": "./knowledge",
+      "description": "Candidate knowledge base: profile, experience, projects, technologies, interview prep, ATS guide, writing style"
+    }
+  },
+  "skills": {
+    "paths": [".opencode/skills"]
+  }
+}

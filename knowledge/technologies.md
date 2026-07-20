@@ -417,9 +417,10 @@ No afirmar experiencia profesional.
 
 # Quarkus
 
-Proyecto
+Proyectos
 
-Disk Cleaner CLI.
+- Disk Cleaner CLI.
+- RAG-Quarkus.
 
 Puede explicar
 
@@ -427,6 +428,103 @@ Puede explicar
 - CLI.
 - Inyección de dependencias.
 - Build nativo (conoce el concepto).
+- RESTEasy Reactive.
+- SmallRye Fault Tolerance.
+- @ConfigMapping.
+- CDI.
+
+---
+
+# LangChain4j
+
+Proyecto
+
+RAG-Quarkus.
+
+Experiencia
+
+- @RegisterAiService.
+- @SystemMessage.
+- EmbeddingStoreContentRetriever.
+- DefaultRetrievalAugmentor.
+- InMemoryEmbeddingStore.
+- DocumentSplitters.recursive.
+- Integración con APIs OpenAI-compatible.
+
+Puede explicar
+
+- Retrieval-Augmented Generation (RAG).
+- Embeddings y similitud semántica.
+- Chunking de documentos.
+- Ingesta de documentos.
+- Content Retriever.
+
+No afirmar experiencia con
+
+- LangChain4j en producción.
+- Otros frameworks RAG.
+
+---
+
+# RAG (Retrieval-Augmented Generation)
+
+Proyecto
+
+RAG-Quarkus.
+
+Puede explicar
+
+- Concepto de RAG.
+- Pipeline: ingestion, embedding, retrieval, generation.
+- Chunking y overlap.
+- Similitud semántica.
+- Context injection en prompts.
+
+---
+
+# Embeddings
+
+Proyecto
+
+RAG-Quarkus.
+
+Experiencia
+
+- AllMiniLmL6V2 (local, ONNX).
+- Vectores de 384 dimensiones.
+- InMemoryEmbeddingStore.
+
+Puede explicar
+
+- Qué es un embedding.
+- Similitud coseno.
+- Diferencia entre embeddings locales y remotos.
+- ONNX Runtime.
+
+---
+
+# Groq API
+
+Proyecto
+
+RAG-Quarkus.
+
+Experiencia
+
+- Integración mediante quarkus-langchain4j-openai.
+- Modelo: llama-3.3-70b-versatile.
+- API compatible OpenAI.
+
+Puede explicar
+
+- Groq como proveedor de LLM.
+- Compatibilidad con API OpenAI.
+- Temperature, max tokens.
+
+No afirmar experiencia con
+
+- fine-tuning.
+- otros modelos de Groq.
 
 ---
 
@@ -445,6 +543,16 @@ No presentarse como Frontend Developer.
 Conocimiento complementario.
 
 ---
+
+## Pyhton
+
+Hice imputacion de datos cvs, excel usando librerias como pandas y numpy
+
+---
+
+## Html Y Css
+
+Conocimiento practico en maquetacion web con html y Css
 
 # Tecnologías NO demostradas
 

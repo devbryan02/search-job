@@ -317,6 +317,103 @@ Java NIO
 
 ---
 
+# Proyecto
+
+## RAG-Quarkus (Retrieval-Augmented Generation)
+
+Repositorio
+
+https://github.com/devbryan02/rag-quarkus
+
+Estado
+
+Proyecto personal en desarrollo.
+
+Objetivo
+
+Construir un sistema RAG (Retrieval-Augmented Generation) que permita realizar preguntas en lenguaje natural sobre documentos indexados (PDF, DOCX, TXT, MD) y obtenga respuestas basadas exclusivamente en el contenido de esos documentos.
+
+Rol
+
+Desarrollador Backend.
+
+Stack
+
+- Java 21
+- Quarkus 3.37
+- LangChain4j
+- Groq API (compatible OpenAI)
+- AllMiniLmL6V2 (embeddings locales)
+- SmallRye Fault Tolerance
+- Hibernate Validator
+- RESTEasy Reactive
+
+Arquitectura
+
+- API REST
+- RAG (Retrieval-Augmented Generation)
+- Embeddings locales (ONNX, 384 dimensiones)
+- InMemory Embedding Store
+- Rate Limiting
+- API Key Authentication
+
+Características principales
+
+- POST /chat con validación de API Key
+- Rate Limiting (10 req/min por cliente)
+- Ingesta automática de documentos al arrancar
+- Parsing de PDF, DOCX, TXT, MD
+- Splitting recursivo (300 chars, overlap 30)
+- Embeddings locales sin llamadas a red
+- LLM via Groq API (llama-3.3-70b-versatile)
+- System message restringiendo respuestas al contexto de documentos
+- Manejo global de errores (429, 500)
+- Configuración tipada con @ConfigMapping
+
+Pipeline
+
+1. Carga de documentos por extensión
+2. Splitting recursivo en chunks
+3. Generación de embeddings locales
+4. Almacenamiento en InMemoryEmbeddingStore
+5. Pregunta del usuario
+6. Retrieval de contexto relevante
+7. Generación de respuesta via LLM
+
+Aprendizajes
+
+- Retrieval-Augmented Generation.
+- LangChain4j con Quarkus.
+- Embeddings y similitud semántica.
+- Integración con APIs de LLM.
+- SmallRye Fault Tolerance.
+- Seguridad con API Key.
+- Configuración tipada en Quarkus.
+
+Palabras ATS
+
+RAG
+
+Retrieval-Augmented Generation
+
+Quarkus
+
+LangChain4j
+
+Embeddings
+
+LLM
+
+API REST
+
+Java
+
+Groq
+
+ONNX
+
+---
+
 # Reglas para el agente
 
 Nunca mostrar más de tres proyectos en el CV.
@@ -342,7 +439,13 @@ Laravel
 
 Quarkus
 
-1. Disk Cleaner
+1. RAG-Quarkus
+2. Disk Cleaner
+
+RAG / IA / LLM
+
+1. RAG-Quarkus
+2. Hotel SaaS (como backend robusto)
 
 Optimización
 

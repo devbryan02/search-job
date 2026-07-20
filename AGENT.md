@@ -132,7 +132,13 @@ Laravel
 
 Quarkus
 
+- RAG-Quarkus
 - Disk Cleaner CLI
+
+RAG / IA / LLM
+
+- RAG-Quarkus
+- Hotel SaaS (como backend robusto)
 
 Backend General
 

@@ -62,7 +62,7 @@ El candidato posee experiencia práctica desarrollando software tanto en proyect
 
 Tiene experiencia construyendo APIs REST, implementando autenticación mediante JWT, utilizando bases de datos relacionales, Docker, pruebas unitarias y arquitecturas modernas.
 
-Además, disfruta aprender nuevas tecnologías construyendo proyectos completos desde cero.
+Además, disfruta aprender nuevas tecnologías construyendo proyectos completos desde cero, incluyendo sistemas RAG (Retrieval-Augmented Generation) con IA aplicada.
 
 ---
 
@@ -143,6 +143,12 @@ Programación reactiva.
 
 Herramientas CLI.
 
+RAG (Retrieval-Augmented Generation).
+
+IA aplicada.
+
+Embeddings.
+
 ---
 
 # Tecnologías favoritas
@@ -160,6 +166,8 @@ Docker.
 Quarkus.
 
 OptaPlanner.
+
+LangChain4j.
 
 ---
 
@@ -241,6 +249,18 @@ Representa:
 - Quarkus.
 - Java CLI.
 
+6.
+
+RAG-Quarkus
+
+Representa:
+
+- Quarkus.
+- RAG.
+- LangChain4j.
+- IA aplicada.
+- Embeddings.
+
 ---
 
 # Valores profesionales
@@ -293,7 +313,14 @@ Para Soporte TI
 
 Para Quarkus
 
+- RAG-Quarkus.
 - Disk Cleaner CLI.
+
+Para RAG / IA / LLM
+
+- RAG-Quarkus.
+- LangChain4j.
+- Embeddings.
 
 ---
 

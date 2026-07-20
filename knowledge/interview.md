@@ -291,7 +291,102 @@ Respuesta
 
 Quería aprender un framework moderno orientado al desarrollo de aplicaciones Java ligeras.
 
-Lo utilicé para desarrollar una herramienta CLI utilizando Picocli.
+Lo utilicé para desarrollar una herramienta CLI utilizando Picocli y también para construir un sistema RAG con LangChain4j.
+
+---
+
+# RAG-Quarkus
+
+## ¿Qué es un sistema RAG?
+
+Respuesta
+
+RAG significa Retrieval-Augmented Generation. Es un patrón que combina recuperación de información con generación de texto.
+
+Primero recuperas contexto relevante de documentos indexados y luego pasas ese contexto a un LLM para generar una respuesta basada en la información real.
+
+---
+
+## ¿Por qué construiste un sistema RAG?
+
+Respuesta
+
+Quería aprender cómo integrar IA de forma práctica en una aplicación backend.
+
+Un sistema RAG permite hacer preguntas en lenguaje natural sobre documentos y obtener respuestas basadas en su contenido real, sin que el LLM invente información.
+
+---
+
+## ¿Qué hace LangChain4j?
+
+Respuesta
+
+Es un framework para integrar LLMs en aplicaciones Java.
+
+En mi proyecto lo utilicé para crear un servicio de chat que conecta un retriever de documentos con un modelo de lenguaje vía API de Groq.
+
+---
+
+## ¿Qué son los embeddings?
+
+Respuesta
+
+Son representaciones vectoriales de texto. Convierten fragmentos de documentos en números para calcular similitud semántica.
+
+Utilizo AllMiniLmL6V2 que genera vectores de 384 dimensiones localmente, sin necesidad de llamadas a red.
+
+---
+
+## ¿Cómo funciona el pipeline de ingesta?
+
+Respuesta
+
+1. Leo archivos de un directorio (PDF, DOCX, TXT, MD).
+2. Cada archivo se parsea con el parser adecuado.
+3. Los documentos se dividen en fragmentos de 300 caracteres con overlap de 30.
+4. Genero embeddings para cada fragmento.
+5. Almaceno los vectores en un InMemoryEmbeddingStore.
+
+---
+
+## ¿Por qué Quarkus y no Spring Boot para este proyecto?
+
+Respuesta
+
+Quería profundizar en Quarkus, que ya había utilizado en el Disk Cleaner CLI.
+
+LangChain4j tiene una integración nativa con Quarkus que simplifica la configuración de LLMs y embeddings.
+
+---
+
+## ¿Qué es el rate limiting y por qué lo implementaste?
+
+Respuesta
+
+Limité el endpoint /chat a 10 solicitudes por minuto usando SmallRye Fault Tolerance.
+
+Esto previene abuso del servicio y controla costos de la API de Groq.
+
+---
+
+## ¿Cómo aseguraste el endpoint /chat?
+
+Respuesta
+
+Implementé un filtro JAX-RS que valida el header X-API-Key.
+
+Solo se aplica al path /chat, otros endpoints pasan sin filtro.
+
+---
+
+## ¿Qué aprendiste con este proyecto?
+
+- Retrieval-Augmented Generation.
+- LangChain4j con Quarkus.
+- Embeddings y similitud semántica.
+- Integración con APIs de LLM.
+- SmallRye Fault Tolerance.
+- Seguridad con API Key.
 
 ---
 
@@ -378,6 +473,16 @@ Quarkus
 
 Picocli
 
+LangChain4j
+
+RAG
+
+Embeddings
+
+Groq
+
+SmallRye Fault Tolerance
+
 Prometheus
 
 Grafana
@@ -425,5 +530,6 @@ Cada respuesta debe apoyarse en alguno de estos elementos:
 - Generador de Horarios.
 - API Reactiva.
 - Disk Cleaner CLI.
+- RAG-Quarkus.
 
 Si ninguna de esas experiencias respalda la respuesta, indicar honestamente que aún no posee experiencia práctica suficiente.
